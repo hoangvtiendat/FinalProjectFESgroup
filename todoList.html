@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link rel="stylesheet" href="todoList.css">
+
+    <link rel="icon" type="image/x-icon" href="logoSgroupMain.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+
+
+<body onload="render()">
+    <div class="animation" id="myElement">
+        <div class="logo" id="logo">
+            <img id="anmlogo" class="anmlogo" src="logoSgroupp.png" alt="">
+            <img id="anmtitleLogo" class="anmtitleLogo" src="titleLogo.png" alt="">
+            <div id="anmSlogan" class="anmSlogan">Think Different - Make different</div>
+        </div>
+
+        <div id="mask" class="mask"></div>
+        <div id="mask1" class="mask1"></div>
+        <div id="mask2" class="mask2"></div>
+    </div>
+
+
+
+    <div class="containerAddNew">
+        <div class="background" onclick="exit()">
+
+        </div>
+        <div class="boxAdd" id="idBoxAdd">
+            <button onclick="exit()" class=" exit material-symbols-outlined">close</button>
+            <div class="titleBoxAdd">Add New Todo</div>
+            <div class="titleBoxEdit">Edit Todo</div>
+            <input onfocus="validated()" class="inpBoxAdd" type="text" name="" id="link"
+                placeholder="Category Etc Marketing">
+            <input onfocus="validated()" class="inpBoxAdd" type="text" name="" id="title" placeholder="Title">
+            <textarea onfocus="validated()" class="inpBoxAdd inpBoxAdd2" name="" id="content" cols="30" rows="10"
+                placeholder="Content"></textarea>
+            <div class="checkTodo">
+                <div class="ckDg">
+                    <input class="ck" id="ckTodo" type="radio" name="radio">Todo
+                </div>
+                <div class="ckDg">
+                    <input class="ck" id="ckDoing" type="radio" name="radio">Doing
+                </div>
+                <div class="ckDg">
+                    <input class="ck" id="ckCompleted" type="radio" name="radio">Completed
+                </div>
+                <div class="ckDg">
+                    <input class="ck" id="ckBlocked" type="radio" name="radio">Blocked
+
+                </div>
+            </div>
+            <button onclick="submit()" onfocus="validated()" class="btnSubmit">Submit</button>
+            <button onclick="update()" onfocus="validated()" class="btnUpdate">Update</button>
+        </div>
+    </div>
+    <div class="headerr">
+        <div class="header">
+
+            <img class="logoTask" src="logoTask.png" alt="">
+
+            <button onclick="newTask()" class="newTask">+ New task</button>
+        </div>
+    </div>
+
+    <div id="container">
+        
+        <div id="todo" class="todo">
+            <div class="titleTodo">
+                <div class="tltTodo">Todo</div>
+                <div id="numberTodo" class="numberTodo">0</div>
+            </div>
+            <div class="lineTodo"></div>
+            <div id="listboxTodo" class="listbox">
+                <!-- <div class="box">     \
+
+                    <div class="function">
+                        <button onclick="edit()" class="edit"></button>
+                        <button class="delete"></button>
+                        <input type="text" class="indexBox" name="" id="">
+                    </div>
+                    <div class="linkBox">Marketing</div>
+                    <div class="titleBox">Write SEO article for new product</div>
+                    <div class="lineBox"></div>
+                    <div class="contentBox">This is an existential moment for effective altruism and the rationalist
+                        community writ-large</div>
+
+                    <div class="timeBox">
+                        <img src="clock.png" alt="">
+                        <div class="time">June 30, 2022</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+
+
+        <div id="doing" class=" todo doing">
+
+            <div class="titleDoing">
+                <div class="tltTodo tltDoing">Doing</div>
+                <div id="numberDoing" class="numberTodo numberDoing">0</div>
+            </div>
+            <div class="lineDoing"></div>
+            <div id="listboxDoing" class="listbox"></div>
+        </div>
+
+
+
+        <div id="completed" class="todo completed">
+
+
+            <div class="titleCompleted">
+                <div class="tltTodo">Completed</div>
+                <div id="numberCompleted" class="numberTodo numberCompleted">0</div>
+            </div>
+            <div class="lineCompleted"></div>
+            <div id="listboxCompleted" class="listbox"></div>
+        </div>
+
+
+        <div id="blocked" class="todo blocked">
+
+            <div class="titleBlocked">
+                <div class="tltTodo">Blocked</div>
+                <div id="numberBlocked" class="numberTodo numberBlocked">0</div>
+            </div>
+            <div class="lineBlocked"></div>
+            <div id="listboxBlocked" class="listbox"></div>
+        </div>
+
+    </div>
+</body>
+
+<script src="todoList.js"></script>
+
+</html>
